@@ -1,0 +1,20 @@
+{
+  "name": "tzif-backend",
+  "version": "1.0.0",
+  "description": "离线 TZif v2/v3 时区规则解析与本地时间歧义裁决后端（API + CLI）",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist-test/",
+    "start": "npm run build && node dist/cli.js serve",
+    "demo": "npm run build && node dist/cli.js demo",
+    "cli": "npm run build && node dist/cli.js"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "typescript": "^5.6.0"
+  }
+}
